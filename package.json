@@ -1,0 +1,25 @@
+{
+  "name": "chat-service",
+  "version": "1.0.0",
+  "description": "Chat service application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesquare-avans/ChatService.git"
+  },
+  "author": "Ruben Rutten <ruben@rubenrutten.nl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thesquare-avans/ChatService/issues"
+  },
+  "homepage": "https://github.com/thesquare-avans/ChatService#readme",
+  "dependencies": {
+    "config": "^1.26.1",
+    "pg": "^6.2.4",
+    "socket.io": "^2.0.3",
+    "sql-template-strings": "^2.2.2"
+  }
+}
