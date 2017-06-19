@@ -5,6 +5,10 @@ const db = require("../lib/db");
 
 module.exports = (socket) => {
 	return (data, ack) => {
+		if(socket.user) {
+			return socket.signAck(ack, socket.errorBody("alreadyIdentified"));
+		}
+
 		if(!data.hasOwnProperty("publicKey")) {
 			return socket.signAck(ack, socket.errorBody("publicKeyMissing"));
 		}

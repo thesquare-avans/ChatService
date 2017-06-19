@@ -18,6 +18,8 @@
   "homepage": "https://github.com/thesquare-avans/ChatService#readme",
   "dependencies": {
     "config": "^1.26.1",
+    "debug": "^2.6.8",
+    "es6-fs": "^1.0.0",
     "pg": "^6.2.4",
     "socket.io": "^2.0.3",
     "sql-template-strings": "^2.2.2"

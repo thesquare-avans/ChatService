@@ -61,3 +61,5 @@ typings/
 *.sublime-project
 config/
 package-lock.json
+
+state.json
