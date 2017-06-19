@@ -3,19 +3,19 @@ const rooms = require("../lib/socketio").rooms;
 
 module.exports = (socket) => {
 	return (data, ack) => {
-		if(!data.hasOwnProperty("streamId")) {
-			return socket.signAck(ack, socket.errorBody("streamIdMissing"));
+		if(!data.hasOwnProperty("room")) {
+			return socket.signAck(ack, socket.errorBody("roomMissing"));
 		}
 
-		if(!rooms.hasOwnProperty(data.streamId)) {
-			return socket.signAck(ack, socket.errorBody("streamIdInvalid"));
+		if(!rooms.hasOwnProperty(data.room)) {
+			return socket.signAck(ack, socket.errorBody("roomInvalid"));
 		}
 
-		socket.join(data.streamId);
+		socket.join(data.room);
 
 		return socket.signAck(ack, {
 			success: true,
-			data: rooms[data.streamId]
+			room: rooms[data.room]
 		});
 	};
 };
