@@ -1,6 +1,5 @@
 const crypto = require("crypto");
 
-const users = require("../lib/users");
 const db = require("../lib/db");
 
 module.exports = (socket) => {
